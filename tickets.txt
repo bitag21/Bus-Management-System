@@ -1,0 +1,14 @@
+Ticket ID: T001
+Passenger: Hana
+Bus Number: AA-012
+Seat Number: A1
+Travel Date: 22/02/26
+Fare: 350.0
+---------------------------
+Ticket ID: T002
+Passenger: Biruk
+Bus Number: AA-123
+Seat Number: A2
+Travel Date: 12/01/27
+Fare: 400.0
+---------------------------
