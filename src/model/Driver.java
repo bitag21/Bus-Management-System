@@ -4,6 +4,7 @@ public class Driver extends Person {
 
     // Driver's license number
     private String licenseNumber;
+     // Number of years of driving experience
     private int experienceYears;
 
     //constructor
