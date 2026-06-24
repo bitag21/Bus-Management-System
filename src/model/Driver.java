@@ -1,6 +1,8 @@
 package model;
 
 public class Driver extends Person {
+
+    // Driver's license number
     private String licenseNumber;
     private int experienceYears;
 
