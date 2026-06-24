@@ -71,10 +71,19 @@ public class Main {
                     int dexpy = scanner.nextInt();
                     scanner.nextLine();
 
-                    Driver driver = new Driver(did, dname, dage, dphone, dlicense, dexpy);
-                    drivers.add(driver);
+                    try{
+                        Driver driver = new Driver(did, dname, dage, dphone, dlicense, dexpy);
+                        drivers.add(driver);
 
-                    System.out.println("Driver added successfully.");
+                        System.out.println("Driver added successfully.");
+
+                        Person personRef = driver;
+                        System.out.println("\n--- Confirming via Person reference ---");
+                        personRef.displayInfo();
+
+                    }catch (IllegalArgumentException e) {
+                        System.out.println("Could not add driver: " + e.getMessage());
+                    }
                     break;
 
                 case 2:
@@ -108,8 +117,13 @@ public class Main {
                         break;
                     }
                     
-                    Bus bus = new Bus(bid, bnum, bcap, broute, assignedDriver);
-                    bS.addBus(bus);
+                    try{
+                        Bus bus = new Bus(bid, bnum, bcap, broute, assignedDriver);
+                        bS.addBus(bus);
+
+                    }catch (IllegalArgumentException e){
+                        System.out.println("Could not add bus: " + e.getMessage());
+                    }
 
                     break;
                     
@@ -130,10 +144,20 @@ public class Main {
                     System.out.print("Enter Email: ");
                     String pemail = scanner.nextLine();
 
-                    Passenger passenger = new Passenger(pid, pname, page, pphone, pemail);
-                    passengers.add(passenger);
+                    try{
+                        Passenger passenger = new Passenger(pid, pname, page, pphone, pemail);
+                        passengers.add(passenger);
 
-                    System.out.println("Passenger added successfully. ");
+                        System.out.println("Passenger added successfully. ");
+
+                        Person personRef = passenger;
+                        System.out.println("\n--- Confirming via Person reference ---");
+                        personRef.displayInfo();
+
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Could not add passenger: " + e.getMessage());
+                    }
+
                     break;
 
                 case 4:
@@ -182,8 +206,13 @@ public class Main {
                     double fare = scanner.nextDouble();
                     scanner.nextLine();
 
-                    Ticket ticket = new Ticket(tid, selectedPassenger, selectedBus, seat, date, fare);
-                    tS.bookTicket(ticket);
+                    try{
+                        Ticket ticket = new Ticket(tid, selectedPassenger, selectedBus, seat, date, fare);
+                        tS.bookTicket(ticket);
+
+                    } catch(IllegalArgumentException e){
+                        System.out.println("Could not book ticket: " + e.getMessage());
+                    }
 
                     break;
 
@@ -255,7 +284,7 @@ public class Main {
                     
                     db.searchPassenger(id);
                     break;
-
+  
                 case 0:
                     scanner.close();
                     System.out.println("Exiting system...");
