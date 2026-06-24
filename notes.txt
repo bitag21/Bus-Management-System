@@ -1,0 +1,11 @@
+BUS MANAGEMENT SYSTEM
+
+This project is a Java application used for managing buses, passengers, drivers, and ticket bookings.
+
+It can add, display, update, search, and delete bus details. Passenger data is stored and retrieved using a MySQL database. Tickets can be booked, updated, cancelled, and searched.
+
+File handling is used to save and read ticket information from a text file. Serialization is used to store and load ticket objects.
+
+The project uses OOP concepts such as inheritance, encapsulation, abstraction, and polymorphism. It also includes exception handling and JDBC for database connection.
+
+This project shows how a simple bus management system can be built using Java.
