@@ -1,5 +1,7 @@
 package model;
-
+/**
+ * Passenger class that extends the Person class.
+*/
 public class Passenger extends Person{
 
   // Stores the passenger's email address  
