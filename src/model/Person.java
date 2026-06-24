@@ -8,6 +8,7 @@ public abstract class Person implements Serializable {
     private int age;
     private String phone;
 
+    // constructor
     public Person(String id, String name, int age, String phone){
         this.id = id;
         this.name = name;
