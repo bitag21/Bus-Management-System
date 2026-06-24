@@ -10,7 +10,7 @@ public class Ticket implements Serializable{
     private String travelDate;
     private double fare;
 
-    //constructor to initialize a ticket object 
+    // constructor to initialize a ticket object 
     public Ticket(String ticketId, Passenger passenger, Bus bus, String seatNumber, String travelDate, double fare) {
         this.ticketId = ticketId;
         this.passenger = passenger;
@@ -20,7 +20,7 @@ public class Ticket implements Serializable{
         this.fare = fare;
     }
 
-    //getters
+    // getters
     public String getTicketId() {
         return ticketId;
     }
@@ -45,7 +45,7 @@ public class Ticket implements Serializable{
         return fare;
     }
 
-    //setters
+    // setters
     public void setTicketId(String ticketId) {
         this.ticketId = ticketId;
     }
@@ -73,7 +73,7 @@ public class Ticket implements Serializable{
         this.fare = fare;
     }
 
-    //method to display ticket information
+    // method to display ticket information
     public void displayInfo() {
         System.out.println("====Ticket Information====");
         System.out.println("Ticket ID: " + getTicketId());
