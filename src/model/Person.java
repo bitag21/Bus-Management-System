@@ -2,6 +2,8 @@ package model;
 
 import java.io.Serializable;
 
+/**
+ * Abstract superclass representing a person in the system.*/
 public abstract class Person implements Serializable {
     private  String id;
     private String name;
@@ -53,6 +55,8 @@ public abstract class Person implements Serializable {
         this.phone = phone;
     }
 
+     /**
+     * Abstract method that must be implemented by subclasses*/
     //abstract method to display person's information
     public abstract void displayInfo();  
 }
