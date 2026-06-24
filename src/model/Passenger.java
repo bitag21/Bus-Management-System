@@ -1,6 +1,8 @@
 package model;
 
 public class Passenger extends Person{
+
+  // Stores the passenger's email address  
     private String email;
 
 
