@@ -10,7 +10,7 @@ public class Ticket implements Serializable{
     private String travelDate;
     private double fare;
 
-    //constructor
+    //constructor to initialize a ticket object 
     public Ticket(String ticketId, Passenger passenger, Bus bus, String seatNumber, String travelDate, double fare) {
         this.ticketId = ticketId;
         this.passenger = passenger;

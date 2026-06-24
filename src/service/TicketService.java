@@ -7,15 +7,17 @@ import model.Bus;
 import java.util.ArrayList;
 
 public class TicketService {
+
+    // list to store all booked tickets
     private ArrayList<Ticket> tickets = new ArrayList<>();
 
-    //book a ticket
+    // Book a ticket
     public void bookTicket(Ticket ticket) {
         tickets.add(ticket);
         System.out.println("Ticket booked successfully.");
     }
 
-    //merhod overloading to book a ticket
+    // merhod overloading to book a ticket
     public void bookTicket(String ticketId, Passenger passenger, Bus bus, String seatNumber, String travelDate, double fare) {
 
         Ticket ticket = new Ticket(ticketId, passenger, bus, seatNumber, travelDate, fare);
@@ -24,7 +26,7 @@ public class TicketService {
         
     }
 
-    //display all tickets
+    // display all tickets
     public void displayAllTickets() {
 
         if (tickets.isEmpty()) {
@@ -37,7 +39,7 @@ public class TicketService {
         }
     }
 
-    //search for a ticket by its ID
+    // search for a ticket by its ID
     public Ticket searchTicket(String ticketId) {
         for (Ticket ticket : tickets) {
             if (ticket.getTicketId().equalsIgnoreCase(ticketId)) {
@@ -47,7 +49,7 @@ public class TicketService {
         return null; // Return null if ticket not found
     }
 
-    //cancel a ticket by its ID
+    // cancel a ticket by its ID
     public void cancelTicket(String ticketId) {
         Ticket ticket = searchTicket(ticketId);
 
@@ -60,7 +62,7 @@ public class TicketService {
         }  
     }
 
-    //update ticket details
+    // update ticket details
     public void updateTicket(String ticketId, String newSeatNumber, String newTravelDate, double newFare) {
         Ticket ticket = searchTicket(ticketId);
 
