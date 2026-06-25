@@ -87,5 +87,8 @@ public class Ticket implements Serializable{
         System.out.println("Fare: " + getFare());
         System.out.println("==========================");
     }
-    
+    @Override
+public String toString() {
+    return "Ticket ID: " + id + ", Passenger: " + name;
+}
 }
