@@ -14,7 +14,7 @@ public class FileManager {
             System.out.println("Data saved successfully to " + fileName);
 
          } catch(IOException e){
-            System.out.println("Error: " + e.getMessage());
+           System.out.println("Error while processing file: " + e.getMessage());
         }
     }
 
@@ -27,7 +27,7 @@ public class FileManager {
 
          } catch(IOException | ClassNotFoundException e){
 
-            System.out.println("Error: " + e.getMessage());
+          System.out.println("Error while processing file: " + e.getMessage());
         }
 
         return new ArrayList<>();
@@ -42,7 +42,7 @@ public class FileManager {
             System.out.println("Text written successfully.");
 
         } catch(IOException e) {
-            System.out.println("Error: " + e.getMessage());
+         System.out.println("Error while processing file: " + e.getMessage());
         }
     }
 
@@ -57,7 +57,7 @@ public class FileManager {
             }
 
         } catch(IOException e) {
-            System.out.println("Error: " + e.getMessage());
+          System.out.println("Error while processing file: " + e.getMessage());
         }
     }
 
@@ -75,7 +75,7 @@ public class FileManager {
             }
             
         } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Error while processing file: " + e.getMessage());
         }
     }
 }
