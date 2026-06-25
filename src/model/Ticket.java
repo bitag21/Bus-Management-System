@@ -50,9 +50,12 @@ public class Ticket implements Serializable{
         this.ticketId = ticketId;
     }
 
-    public void setPassenger(Passenger passenger) {
-        this.passenger = passenger;
+   public void setPassenger(Passenger passenger) {
+    if (passenger == null) {
+        throw new IllegalArgumentException("Passenger cannot be null");
     }
+    this.passenger = passenger;
+}
 
     public void setBus(Bus bus) {
         this.bus = bus;
