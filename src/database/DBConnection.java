@@ -12,20 +12,21 @@ public class DBConnection {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "BusProject2026";
 
-    public static Connection getConnection(){
+   public static Connection getConnection(){
 
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    try{
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
-        } catch (ClassNotFoundException e) {
-            System.out.println("JDBC Driver not found.");
-        
-        } catch (SQLException e) {
-            System.out.println("Connection failed: " + e.getMessage());
-        }
-        return null;
+    } catch (ClassNotFoundException e) {
+        System.out.println("JDBC Driver not found.");
+        throw new RuntimeException(e);
+
+    } catch (SQLException e) {
+        System.out.println("Connection failed: " + e.getMessage());
+        throw new RuntimeException(e);
     }
+}
 
     // statement to display all passengers from the database
     public void displayPassengers(){
