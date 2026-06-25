@@ -40,13 +40,19 @@ public class Bus implements Serializable {
     }
 
     //setters
-    public void setBusId(String busId) {
-        this.busId = busId;
+   public void setBusId(String busId) {
+    if (busId == null || busId.trim().isEmpty()) {
+        throw new IllegalArgumentException("Bus ID cannot be empty");
     }
+    this.busId = busId;
+}
 
-    public void setBusNumber(String busNumber) {
-        this.busNumber = busNumber;
+  public void setBusNumber(String busNumber) {
+    if (busNumber == null || busNumber.trim().isEmpty()) {
+        throw new IllegalArgumentException("Bus number cannot be empty");
     }
+    this.busNumber = busNumber;
+}
 
     public void setCapacity(int capacity) {
         if(capacity < 0){
