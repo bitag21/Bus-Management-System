@@ -85,5 +85,14 @@ public class Bus implements Serializable {
         }
         System.out.println("=======================");
     }
-
+@Override
+public String toString() {
+    return "Bus{" +
+            "busId='" + busId + '\'' +
+            ", busNumber='" + busNumber + '\'' +
+            ", capacity=" + capacity +
+            ", route='" + route + '\'' +
+            ", driver=" + (driver != null ? driver.getName() : "Not assigned") +
+            '}';
+}
 }
