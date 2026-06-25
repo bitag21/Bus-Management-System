@@ -47,9 +47,11 @@ public class Ticket implements Serializable{
 
     // setters
     public void setTicketId(String ticketId) {
-        this.ticketId = ticketId;
+    if (ticketId == null || ticketId.trim().isEmpty()) {
+        throw new IllegalArgumentException("Ticket ID cannot be empty");
     }
-
+    this.ticketId = ticketId;
+}
    public void setPassenger(Passenger passenger) {
     if (passenger == null) {
         throw new IllegalArgumentException("Passenger cannot be null");
@@ -57,17 +59,26 @@ public class Ticket implements Serializable{
     this.passenger = passenger;
 }
 
-    public void setBus(Bus bus) {
-        this.bus = bus;
+   public void setBus(Bus bus) {
+    if (bus == null) {
+        throw new IllegalArgumentException("Bus cannot be null");
     }
+    this.bus = bus;
+}
 
-    public void setSeatNumber(String seatNumber) {
-        this.seatNumber = seatNumber;
+   public void setSeatNumber(String seatNumber) {
+    if (seatNumber == null || seatNumber.trim().isEmpty()) {
+        throw new IllegalArgumentException("Seat number cannot be empty");
     }
-
+    this.seatNumber = seatNumber;
+}
+  
     public void setTravelDate(String travelDate) {
-        this.travelDate = travelDate;
+    if (travelDate == null || travelDate.trim().isEmpty()) {
+        throw new IllegalArgumentException("Travel date cannot be empty");
     }
+    this.travelDate = travelDate;
+}
 
     public void setFare(double fare) {
         if(fare < 0){
