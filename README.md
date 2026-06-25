@@ -20,14 +20,14 @@ Bus-Management-System/
 └── src/
     ├── database/
     │   └── DBConnection.java
-    ├── exception/
+    ├── Exception/
     │   ├── BusNotFoundException.java
     │   └── TicketNotFoundException.java
-    ├── file/
+    ├── File/
     │   └── FileManager.java
-    ├── main/
+    ├── Main/
     │   └── Main.java
-    ├── model/
+    ├── Model/
     │   ├── Person.java         (abstract base class)
     │   ├── Driver.java         (extends Person)
     │   ├── Passenger.java      (extends Person)
@@ -46,7 +46,7 @@ Bus-Management-System/
 - MySQL Connector/J (JDBC driver `.jar`) added to your classpath
 
 ### Database Setup
-```sql
+```SQL 
 CREATE DATABASE busmanagementsystem;
 
 USE busmanagementsystem;
@@ -93,7 +93,7 @@ private static final String PASSWORD = "BusProject2026";
 | 11 | Search Passenger in Database |
 | 0 | Exit |
 
-## OOP Concepts Demonstrated
+## OOP concepts demonstrated
 
 | Concept | Where |
 |---|---|
