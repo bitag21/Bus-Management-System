@@ -21,9 +21,12 @@ public class Passenger extends Person{
 
 
     //setters
-    public void setEmail(String email) {
-        this.email = email;
+   public void setEmail(String email) {
+    if (email == null || email.trim().isEmpty()) {
+        throw new IllegalArgumentException("Email cannot be empty");
     }
+    this.email = email;
+}
 
     //overriding the displayInfo method from Person class(runtime polymorphism)
     @Override
