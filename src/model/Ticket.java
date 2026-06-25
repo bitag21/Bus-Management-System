@@ -87,8 +87,15 @@ public class Ticket implements Serializable{
         System.out.println("Fare: " + getFare());
         System.out.println("==========================");
     }
-    @Override
+   @Override
 public String toString() {
-    return "Ticket ID: " + id + ", Passenger: " + name;
+    return "Ticket{" +
+            "ticketId='" + ticketId + '\'' +
+            ", passenger='" + (passenger != null ? passenger.getName() : "null") + '\'' +
+            ", bus='" + (bus != null ? bus.getBusNumber() : "null") + '\'' +
+            ", seatNumber='" + seatNumber + '\'' +
+            ", travelDate='" + travelDate + '\'' +
+            ", fare=" + fare +
+            '}';
 }
 }
