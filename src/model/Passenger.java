@@ -39,5 +39,8 @@ public class Passenger extends Person{
         System.out.println("Email: " + getEmail());
         System.out.println("============================");
     }
-
+  @Override
+public String toString() {
+    return "Passenger: " + getName();
+}
 }
