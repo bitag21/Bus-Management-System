@@ -24,9 +24,12 @@ public class Driver extends Person {
     }
 
     //setters
-    public void setLicenseNumber(String licenseNumber){
-        this.licenseNumber = licenseNumber;
+  public void setLicenseNumber(String licenseNumber){
+    if (licenseNumber == null || licenseNumber.trim().isEmpty()) {
+        throw new IllegalArgumentException("License number cannot be empty");
     }
+    this.licenseNumber = licenseNumber;
+}
     
     public void setExperienceYears(int experienceYears) {
         if(experienceYears < 0){
@@ -47,4 +50,15 @@ public class Driver extends Person {
         System.out.println("Experience Years: " + getExperienceYears());
         System.out.println("==========================");
     }
+    @Override
+public String toString() {
+    return "Driver{" +
+            "id='" + getId() + '\'' +
+            ", name='" + getName() + '\'' +
+            ", age=" + getAge() +
+            ", phone='" + getPhone() + '\'' +
+            ", licenseNumber='" + licenseNumber + '\'' +
+            ", experienceYears=" + experienceYears +
+            '}';
+}
 }
