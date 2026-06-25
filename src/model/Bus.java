@@ -61,13 +61,19 @@ public class Bus implements Serializable {
         this.capacity = capacity;
     }
 
-    public void setRoute(String route) {
-        this.route = route;
-    }   
-
-    public void setDriver(Driver driver) {
-        this.driver = driver;
+   public void setRoute(String route) {
+    if (route == null || route.trim().isEmpty()) {
+        throw new IllegalArgumentException("Route cannot be empty");
     }
+    this.route = route;
+}
+
+   public void setDriver(Driver driver) {
+    if (driver == null) {
+        throw new IllegalArgumentException("Driver cannot be null");
+    }
+    this.driver = driver;
+}
 
     //method to display bus information
     public void displayInfo() {
