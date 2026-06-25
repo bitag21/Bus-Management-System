@@ -147,7 +147,7 @@ searching passenger records in the MySQL database.
 
 ---
 
-## Team Contributions
+## Team Contributors
 - Wuberst Goshu
 - Tsion Zefere
 - Yedidiya Amanuel
