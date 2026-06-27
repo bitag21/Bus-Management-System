@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class FileManager {
     
     // Saves object data using serialization
-public void saveObjects(String fileName, ArrayList<?> list) {
+    public void saveObjects(String fileName, ArrayList<?> list) {
 
         try(ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(fileName))){
 
